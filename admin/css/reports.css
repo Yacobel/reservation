@@ -1,0 +1,275 @@
+/* Reports Page Styles */
+
+/* Report Container */
+.report-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+/* Report Filters */
+.report-filters {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+}
+
+.filter-form {
+  width: 100%;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.button-group {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.filter-label {
+  font-weight: 600;
+  color: var(--dark-gray);
+  font-size: 14px;
+}
+
+.filter-select,
+.date-input {
+  padding: 10px 15px;
+  border: 1px solid var(--medium-gray);
+  border-radius: 5px;
+  background-color: var(--white);
+  color: var(--dark-gray);
+  font-size: 14px;
+  min-width: 180px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-select:focus,
+.date-input:focus {
+  border-color: var(--hilton-blue);
+  box-shadow: 0 0 0 3px rgba(0, 73, 144, 0.1);
+  outline: none;
+}
+
+.btn-filter,
+.btn-export {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-filter {
+  background-color: var(--hilton-blue);
+  color: var(--white);
+  border: none;
+}
+
+.btn-filter:hover {
+  background-color: var(--hilton-light-blue);
+}
+
+.btn-export {
+  background-color: var(--hilton-gold);
+  color: var(--white);
+  border: none;
+  margin-left: 10px;
+}
+
+.btn-export:hover {
+  background-color: var(--hilton-gold-light);
+  color: var(--dark-gray);
+}
+
+/* Report Summary */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.summary-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: var(--transition-standard);
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.summary-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.reservations-icon {
+  background-color: var(--hilton-blue);
+}
+
+.confirmed-icon {
+  background-color: var(--success-green);
+}
+
+.completed-icon {
+  background-color: var(--hilton-gold);
+}
+
+.cancelled-icon {
+  background-color: var(--error-red);
+}
+
+.revenue-icon {
+  background-color: var(--hilton-gold);
+}
+
+.bookings-icon {
+  background-color: var(--hilton-blue);
+}
+
+.average-icon {
+  background-color: var(--warning-yellow);
+}
+
+.rooms-icon {
+  background-color: var(--hilton-light-blue);
+}
+
+.summary-content {
+  flex: 1;
+}
+
+.summary-content h3 {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  color: var(--dark-gray);
+  font-weight: 600;
+}
+
+.summary-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+/* Report Chart */
+.report-chart {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  height: 400px;
+}
+
+/* Report Table */
+.report-table {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+}
+
+.report-table h3 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  color: var(--dark-gray);
+  font-weight: 600;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+.data-table thead th {
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.data-table tbody td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--light-gray);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .summary-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .filter-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .filter-item {
+    width: 100%;
+  }
+  
+  .filter-select,
+  .date-input {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .report-chart {
+    height: 300px;
+  }
+  
+  .btn-filter,
+  .btn-export {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,151 @@
+/* Dashboard Header Styles */
+.dashboard-header {
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.dashboard-logo {
+  flex: 0 0 auto;
+}
+
+.dashboard-logo img {
+  height: 30px;
+}
+
+.dashboard-nav {
+  flex: 1 1 auto;
+  margin: 0 20px;
+}
+
+.dashboard-nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-nav li {
+  margin: 0 10px;
+}
+
+.dashboard-nav a {
+  color: var(--dark-gray);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: var(--transition-standard);
+}
+
+.dashboard-nav a:hover {
+  color: var(--hilton-blue);
+  background-color: var(--light-gray);
+}
+
+.dashboard-nav a.active {
+  color: var(--hilton-blue);
+  background-color: var(--light-gray);
+}
+
+.dashboard-user {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.user-dropdown {
+  position: relative;
+}
+
+.user-dropdown-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: var(--transition-standard);
+}
+
+.user-dropdown-btn:hover {
+  background-color: var(--light-gray);
+}
+
+.user-dropdown-btn svg:first-child {
+  margin-right: 8px;
+}
+
+.user-dropdown-btn svg:last-child {
+  margin-left: 8px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: var(--white);
+  min-width: 180px;
+  box-shadow: var(--box-shadow);
+  border-radius: 4px;
+  z-index: 1;
+  margin-top: 5px;
+}
+
+.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: var(--dark-gray);
+  transition: var(--transition-standard);
+}
+
+.dropdown-item:hover {
+  background-color: var(--light-gray);
+  color: var(--hilton-blue);
+}
+
+.dropdown-item svg {
+  margin-right: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 20px;
+  }
+  
+  .dashboard-nav {
+    order: 3;
+    width: 100%;
+    margin: 10px 0 0;
+  }
+  
+  .dashboard-nav ul {
+    flex-wrap: wrap;
+  }
+  
+  .dashboard-nav li {
+    margin: 5px;
+  }
+}

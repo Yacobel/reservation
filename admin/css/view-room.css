@@ -1,0 +1,453 @@
+/* Room Details Page Styles */
+
+/* Main Container Styles */
+.room-details-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    margin-right: 20px;
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: var(--medium-gray);
+    color: var(--dark-gray);
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-back:hover {
+    background-color: #d8d8d8;
+}
+
+.room-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Room Details Card */
+.room-details-card {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.room-details-image {
+    flex: 0 0 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.room-details-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.room-details-image:hover img {
+    transform: scale(1.05);
+}
+
+.room-details-image .room-status {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.room-details-info {
+    flex: 1;
+    padding: 30px;
+}
+
+.room-details-header h2 {
+    margin: 0 0 5px 0;
+    font-size: 24px;
+    color: var(--hilton-blue);
+}
+
+.room-details-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+.room-details-price {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: rgba(0, 73, 144, 0.05);
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-label {
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.price-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--hilton-blue);
+}
+
+.room-details-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.meta-label {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.meta-value {
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.room-details-description {
+    margin: 20px 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--medium-gray);
+}
+
+.room-details-description h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: var(--dark-gray);
+}
+
+.room-details-description p {
+    line-height: 1.6;
+    color: #4a4a4a;
+}
+
+.room-details-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.room-details-actions .btn-edit,
+.room-details-actions .btn-delete,
+.room-details-actions button.btn-edit,
+.room-details-actions button.edit-room-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.room-details-actions .btn-edit,
+.room-details-actions button.btn-edit,
+.room-details-actions button.edit-room-btn {
+    background-color: var(--hilton-gold);
+    color: white;
+    border: none;
+}
+
+.room-details-actions .btn-edit:hover,
+.room-details-actions button.btn-edit:hover,
+.room-details-actions button.edit-room-btn:hover {
+    background-color: var(--hilton-gold-light);
+    transform: translateY(-2px);
+}
+
+.room-details-actions .btn-delete {
+    background-color: var(--error-red);
+    color: white;
+}
+
+.room-details-actions .btn-delete:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Reservation History Styles */
+.room-reservation-history {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.room-reservation-history h2 {
+    margin: 0 0 20px 0;
+    font-size: 22px;
+    color: var(--hilton-blue);
+}
+
+.reservation-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reservation-table th {
+    background-color: var(--hilton-blue);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.reservation-table th:first-child {
+    border-top-left-radius: 8px;
+}
+
+.reservation-table th:last-child {
+    border-top-right-radius: 8px;
+}
+
+.reservation-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+}
+
+.reservation-table tr:last-child td {
+    border-bottom: none;
+}
+
+.reservation-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.guest-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.guest-name {
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.guest-email {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.reservation-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.status-confirmed {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success-green);
+}
+
+.status-pending {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: var(--warning-yellow);
+}
+
+.status-cancelled {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--error-red);
+}
+
+.status-completed {
+    background-color: rgba(0, 73, 144, 0.1);
+    color: var(--hilton-blue);
+}
+
+.no-reservations {
+    text-align: center;
+    padding: 30px;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+    overflow: hidden;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid #e9ecef;
+    background-color: var(--hilton-blue);
+    color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.close-modal {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #ddd;
+}
+
+.modal-body {
+    padding: 0;
+    overflow-y: auto;
+    max-height: calc(90vh - 70px);
+    display: flex;
+}
+
+.modal-image {
+    flex: 0 0 40%;
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.modal-form {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.current-image-container {
+    margin-bottom: 20px;
+}
+
+.current-room-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-top: 10px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px;
+    border-top: 1px solid #e9ecef;
+    gap: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .room-details-card {
+        flex-direction: column;
+    }
+    
+    .room-details-image {
+        height: 300px;
+    }
+    
+    .modal-body {
+        flex-direction: column;
+    }
+    
+    .modal-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .room-details-meta {
+        grid-template-columns: 1fr;
+    }
+    
+    .room-details-actions {
+        flex-direction: column;
+    }
+    
+    .room-reservation-history {
+        overflow-x: auto;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+    }
+}

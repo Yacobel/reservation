@@ -1,0 +1,478 @@
+/* Pages CSS - Styles for dining, meetings, and contact pages */
+
+/* Common Page Styles */
+.page-hero {
+    background-color: var(--hilton-light-gray);
+    padding: 80px 0;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--hilton-blue), var(--hilton-gold));
+}
+
+.page-hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-hero .hero-subtitle {
+    font-family: "Inter", sans-serif;
+    color: var(--hilton-gold);
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.page-hero .hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: var(--hilton-blue);
+}
+
+.page-hero .hero-description {
+    font-size: 18px;
+    color: #6b7280;
+    margin-bottom: 32px;
+    max-width: 600px;
+}
+
+/* Active Navigation Link */
+.nav-link.active {
+    color: var(--hilton-gold);
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--hilton-gold);
+}
+
+/* Section Styles */
+.content-section {
+    padding: 60px 0;
+}
+
+.content-section:nth-child(even) {
+    background-color: var(--hilton-light-gray);
+}
+
+/* Card Styles */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 24px;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--hilton-blue);
+    margin-bottom: 12px;
+}
+
+.card-description {
+    color: #6b7280;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.card-detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-detail-label {
+    font-weight: 600;
+    color: var(--hilton-gold);
+    margin-bottom: 4px;
+}
+
+.card-detail-value {
+    color: #6b7280;
+}
+
+/* Dining Page Specific Styles */
+.dining-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.hilton.com/im/en/NoHotel/15483650/shutterstock-1078953762.jpg?impolicy=crop&cw=5000&ch=3333&gravity=NorthWest&xposition=0&yposition=0&rw=768&rh=512');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.dining-hero .hero-title,
+.dining-hero .hero-subtitle,
+.dining-hero .hero-description {
+    color: white;
+}
+
+.restaurant-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.restaurant-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.restaurant-hours,
+.restaurant-cuisine {
+    margin-bottom: 8px;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.offer-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--hilton-gold);
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+}
+
+.offer-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--hilton-blue);
+    margin-bottom: 12px;
+}
+
+.offer-description {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.offer-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--hilton-gold);
+    margin-bottom: 20px;
+}
+
+/* Meetings Page Specific Styles */
+.meetings-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.hilton.com/im/en/NoHotel/15483650/shutterstock-1078953762.jpg?impolicy=crop&cw=5000&ch=3333&gravity=NorthWest&xposition=0&yposition=0&rw=768&rh=512');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.meetings-hero .hero-title,
+.meetings-hero .hero-subtitle,
+.meetings-hero .hero-description {
+    color: white;
+}
+
+.space-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.space-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.space-capacity,
+.space-size {
+    margin-bottom: 8px;
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.type-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.type-card:hover {
+    transform: translateY(-5px);
+}
+
+.type-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--hilton-light-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--hilton-blue);
+}
+
+.type-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--hilton-blue);
+    margin-bottom: 12px;
+}
+
+.type-description {
+    color: #6b7280;
+}
+
+.request-proposal {
+    background-color: var(--hilton-blue);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.request-proposal .section-title,
+.request-proposal .section-subtitle {
+    color: white;
+}
+
+.proposal-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Contact Page Specific Styles */
+.contact-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.hilton.com/im/en/NoHotel/15483650/shutterstock-1078953762.jpg?impolicy=crop&cw=5000&ch=3333&gravity=NorthWest&xposition=0&yposition=0&rw=768&rh=512');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.contact-hero .hero-title,
+.contact-hero .hero-subtitle,
+.contact-hero .hero-description {
+    color: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.method-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--hilton-light-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--hilton-blue);
+    flex-shrink: 0;
+}
+
+.method-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--hilton-blue);
+    margin-bottom: 8px;
+}
+
+.method-text {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.contact-form-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--hilton-blue);
+    margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--hilton-blue);
+}
+
+.map-section {
+    padding: 60px 0;
+}
+
+.map-container {
+    margin-top: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-grid,
+    .offers-grid,
+    .types-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero .hero-title {
+        font-size: 36px;
+    }
+    
+    .page-hero .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .page-hero .hero-description {
+        font-size: 16px;
+    }
+    
+    .card-grid,
+    .offers-grid,
+    .types-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-hero {
+        padding: 60px 0;
+    }
+    
+    .page-hero .hero-title {
+        font-size: 28px;
+    }
+    
+    .contact-method {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,430 @@
+/* My Reservations Styles */
+:root {
+  --hilton-blue: #004990;
+  --hilton-light-blue: #0066cc;
+  --hilton-gold: #b89d5c;
+  --hilton-gold-light: #d4c28e;
+  --white: #ffffff;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --dark-gray: #343a40;
+  --error-red: #dc3545;
+  --success-green: #28a745;
+  --warning-yellow: #ffc107;
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition-standard: all 0.3s ease;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Alert Messages */
+.alert {
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: fadeIn 0.5s ease;
+}
+
+.alert-success {
+  background-color: rgba(40, 167, 69, 0.1);
+  border-left: 4px solid var(--success-green);
+  color: var(--success-green);
+}
+
+.alert-error {
+  background-color: rgba(220, 53, 69, 0.1);
+  border-left: 4px solid var(--error-red);
+  color: var(--error-red);
+}
+
+.alert-warning {
+  background-color: rgba(255, 193, 7, 0.1);
+  border-left: 4px solid var(--warning-yellow);
+  color: var(--dark-gray);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: var(--transition-standard);
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+/* Reservations Container */
+.reservations-container {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.reservations-header {
+  padding: 30px;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.reservations-header h1 {
+  margin: 0 0 20px 0;
+  color: var(--dark-gray);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Reservation Stats */
+.reservation-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.stat-item {
+  flex: 1;
+  background-color: var(--light-gray);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: var(--transition-standard);
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.stat-value {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--hilton-blue);
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  color: var(--dark-gray);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Reservations List */
+.reservations-list {
+  padding: 30px;
+}
+
+.reservation-card {
+  display: flex;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+  transition: var(--transition-standard);
+}
+
+.reservation-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.reservation-image {
+  flex: 0 0 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.reservation-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.reservation-card:hover .reservation-image img {
+  transform: scale(1.05);
+}
+
+.reservation-status {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  padding: 5px 15px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0 4px 4px 0;
+}
+
+.status-confirmed {
+  background-color: var(--success-green);
+}
+
+.status-pending {
+  background-color: var(--warning-yellow);
+  color: var(--dark-gray);
+}
+
+.status-cancelled {
+  background-color: var(--error-red);
+}
+
+.reservation-details {
+  flex: 1;
+  padding: 25px;
+  position: relative;
+}
+
+.reservation-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  color: var(--dark-gray);
+}
+
+.room-number {
+  color: var(--hilton-blue);
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  font-size: 14px;
+}
+
+/* Reservation Dates */
+.reservation-dates {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.date-group {
+  flex: 1;
+  text-align: center;
+}
+
+.date-label {
+  display: block;
+  font-size: 12px;
+  color: var(--dark-gray);
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.date-value {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--hilton-blue);
+}
+
+.date-separator {
+  width: 30px;
+  height: 1px;
+  background-color: var(--medium-gray);
+  position: relative;
+}
+
+.date-separator:before,
+.date-separator:after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--medium-gray);
+  top: -2.5px;
+}
+
+.date-separator:before {
+  left: 0;
+}
+
+.date-separator:after {
+  right: 0;
+}
+
+/* Reservation Price */
+.reservation-price {
+  margin-bottom: 20px;
+}
+
+.price-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: rgba(184, 157, 92, 0.1);
+  border-radius: 6px;
+}
+
+.price-label {
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+
+.price-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--hilton-gold);
+}
+
+/* Reservation Actions */
+.reservation-actions {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition-standard);
+  border: none;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: var(--hilton-blue);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--hilton-light-blue);
+}
+
+.btn-cancel {
+  background-color: transparent;
+  color: var(--error-red);
+  border: 1px solid var(--error-red);
+}
+
+.btn-cancel:hover {
+  background-color: var(--error-red);
+  color: var(--white);
+}
+
+.btn-delete {
+  background-color: var(--error-red);
+  color: var(--white);
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* No Reservations */
+.no-reservations {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.no-data-icon {
+  margin-bottom: 20px;
+  color: var(--medium-gray);
+}
+
+.no-reservations h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--dark-gray);
+}
+
+.no-reservations p {
+  color: var(--dark-gray);
+  margin-bottom: 25px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .reservation-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .stat-item {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reservation-card {
+    flex-direction: column;
+  }
+  
+  .reservation-image {
+    flex: 0 0 200px;
+    width: 100%;
+  }
+  
+  .reservation-details {
+    padding: 20px;
+  }
+  
+  .reservation-dates {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-content {
+    padding: 20px 15px;
+  }
+  
+  .reservations-header {
+    padding: 20px;
+  }
+  
+  .reservations-list {
+    padding: 20px;
+  }
+  
+  .date-value {
+    font-size: 14px;
+  }
+  
+  .price-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .price-value {
+    font-size: 16px;
+  }
+}
